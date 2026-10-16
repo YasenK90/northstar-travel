@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0e17" />
+  <meta name="description" content="NORTHSTAR is a thoughtful travel planner for people who want to get a little further off the usual route." />
+  <title>NORTHSTAR — Go a little further</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..650;1,9..144,400..650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> GOOD TRIPS START WITH A LITTLE CURIOSITY <span class="announcement-right">INDEPENDENT TRAVEL PLANNING · EST. 2024</span></div>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Northstar home"><span class="mark">✳</span> NORTHSTAR<span class="wordmark-period">.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#discover">Discover</a>
+      <a href="#routes">Field notes</a>
+      <a href="#method">Our approach</a>
+    </nav>
+    <div class="header-actions">
+      <button class="my-trip-button" id="open-trip" type="button"><span class="trip-icon">↗</span> My trip <span class="trip-count" id="trip-count">0</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" type="button"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#discover">Discover <span>01</span></a>
+      <a href="#routes">Field notes <span>02</span></a>
+      <a href="#method">Our approach <span>03</span></a>
+      <button type="button" class="mobile-trip-link" id="open-trip-mobile">Open my trip <span>↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A DIFFERENT KIND OF TRAVEL PLANNER</div>
+        <h1 id="hero-title">Go a little<br /><em>further.</em></h1>
+        <p class="hero-description">Less checklist. More <span>“remember that time?”</span><br />Build thoughtful trips for the places that stay with you.</p>
+        <div class="hero-buttons">
+          <a class="button button-dark" href="#discover">Find your somewhere <span>↗</span></a>
+          <a class="text-link" href="#routes">Explore field notes <span>↓</span></a>
+        </div>
+        <div class="hero-meta">
+          <div class="avatar-stack" aria-hidden="true"><span class="avatar av-one">M</span><span class="avatar av-two">J</span><span class="avatar av-three">A</span><span class="avatar av-four">+</span></div>
+          <div><strong>Made for the curious</strong><span>Routes worth taking the long way for.</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1600&q=88" alt="Star-filled night sky over silhouetted mountain ridges" fetchpriority="high" />
+          <div class="image-grain" aria-hidden="true"></div>
+          <div class="image-topline"><span>FIELD NOTE 008</span><span>46° 28' N / 11° 52' E</span></div>
+          <div class="hero-image-caption"><span class="caption-kicker">THE SLOW ROAD</span><strong>Dolomites, Italy</strong><span>6 days · 4 quiet villages</span></div>
+          <div class="image-stamp" aria-label="Made for wandering"><span>MADE FOR<br />WANDERING</span><b>✳</b></div>
+        </div>
+        <div class="hero-side-note"><span class="vertical-rule"></span><span>TAKE THE<br />SCENIC ROUTE</span><span class="side-note-number">01 / 06</span></div>
+      </div>
+      <div class="hero-bottomline"><span>NOT ALL THOSE WHO WANDER NEED A SPREADSHEET.</span><span>SCROLL TO FIND YOUR NEXT ↓</span></div>
+    </section>
+
+    <section class="intro-strip" id="method">
+      <div class="intro-label"><span class="section-index">01</span><span>THE NORTHSTAR WAY</span></div>
+      <p>We believe the best trips aren't the ones where you see everything. They're the ones where <em>you really feel somewhere.</em></p>
+      <a href="#discover" class="round-arrow" aria-label="Discover destinations">↘</a>
+    </section>
+
+    <section class="discover-section section-pad" id="discover">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT CHAPTER</div><h2>Somewhere<br /><em>out there.</em></h2></div>
+        <p>Wild coastlines, tiny mountain towns, cities that ask you to slow down. Start with a feeling; we'll help with the rest.</p>
+      </div>
+      <div class="discover-tools">
+        <div class="filter-list" role="group" aria-label="Filter destinations">
+          <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">All places <span>06</span></button>
+          <button class="filter-chip" type="button" data-filter="mountains" aria-pressed="false">Mountains</button>
+          <button class="filter-chip" type="button" data-filter="coast" aria-pressed="false">Coast</button>
+          <button class="filter-chip" type="button" data-filter="culture" aria-pressed="false">Culture</button>
+        </div>
+        <label class="search-box"><span class="search-icon">⌕</span><span class="sr-only">Search places</span><input id="destination-search" type="search" placeholder="Find a place..." autocomplete="off" /><kbd>↵</kbd></label>
+      </div>
+      <div class="destination-grid" id="destination-grid">
+        <article class="destination-card card-large" data-category="mountains" data-name="dolomites italy" data-place="Dolomites" data-country="Italy" data-duration="6 days" data-type="mountains" data-image="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=85" data-description="Quiet trails, rifugio lunches and mountain light that changes by the minute.">
+          <button type="button" class="destination-image-button" aria-label="View Dolomites trip details"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=85" alt="Rugged alpine peaks beneath a starry sky" loading="lazy" /><span class="card-number">Nº 01</span><span class="card-hover-arrow">↗</span></button>
+          <div class="destination-card-info"><div><h3>Dolomites</h3><p>Italy <span>·</span> 6 days</p></div><button class="add-place" type="button" aria-label="Add Dolomites to my trip" title="Add to my trip">+</button></div>
+          <div class="card-description">High trails, slower mornings, no rush to the next stop.</div>
+        </article>
+        <article class="destination-card" data-category="coast" data-name="madeira portugal" data-place="Madeira" data-country="Portugal" data-duration="5 days" data-type="coast" data-image="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1100&q=85" data-description="Volcanic paths, black-sand beaches and long lunches above the Atlantic.">
+          <button type="button" class="destination-image-button" aria-label="View Madeira trip details"><img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1100&q=85" alt="Rugged coastline and ocean in soft afternoon light" loading="lazy" /><span class="card-number">Nº 02</span><span class="card-hover-arrow">↗</span></button>
+          <div class="destination-card-info"><div><h3>Madeira</h3><p>Portugal <span>·</span> 5 days</p></div><button class="add-place" type="button" aria-label="Add Madeira to my trip" title="Add to my trip">+</button></div>
+          <div class="card-description">Follow the levadas until the ocean comes into view.</div>
+        </article>
+        <article class="destination-card" data-category="culture" data-name="kyoto japan" data-place="Kyoto" data-country="Japan" data-duration="7 days" data-type="culture" data-image="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1100&q=85" data-description="Early temple walks, pocket-sized coffee bars and backstreet evenings.">
+          <button type="button" class="destination-image-button" aria-label="View Kyoto trip details"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1100&q=85" alt="Traditional Kyoto street with wooden buildings" loading="lazy" /><span class="card-number">Nº 03</span><span class="card-hover-arrow">↗</span></button>
+          <div class="destination-card-info"><div><h3>Kyoto</h3><p>Japan <span>·</span> 7 days</p></div><button class="add-place" type="button" aria-label="Add Kyoto to my trip" title="Add to my trip">+</button></div>
+          <div class="card-description">Find the small details between the famous places.</div>
+        </article>
+        <article class="destination-card" data-category="coast" data-name="alentejo portugal" data-place="Alentejo Coast" data-country="Portugal" data-duration="4 days" data-type="coast" data-image="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" data-description="Empty beaches, pine forests and little places that close for lunch.">
+          <button type="button" class="destination-image-button" aria-label="View Alentejo Coast trip details"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1100&q=85" alt="Ocean waves rolling onto an empty beach" loading="lazy" /><span class="card-number">Nº 04</span><span class="card-hover-arrow">↗</span></button>
+          <div class="destination-card-info"><div><h3>Alentejo Coast</h3><p>Portugal <span>·</span> 4 days</p></div><button class="add-place" type="button" aria-label="Add Alentejo Coast to my trip" title="Add to my trip">+</button></div>
+          <div class="card-description">A little salt in the air and nowhere else to be.</div>
+        </article>
+        <article class="destination-card card-wide" data-category="mountains" data-name="lofoten norway" data-place="Lofoten Islands" data-country="Norway" data-duration="5 days" data-type="mountains" data-image="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1400&q=85" data-description="Fishermen's cabins, steep peaks and weather worth waiting for.">
+          <button type="button" class="destination-image-button" aria-label="View Lofoten Islands trip details"><img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1400&q=85" alt="Northern lights above a quiet arctic landscape" loading="lazy" /><span class="card-number">Nº 05</span><span class="card-hover-arrow">↗</span></button>
+          <div class="destination-card-info"><div><h3>Lofoten Islands</h3><p>Norway <span>·</span> 5 days</p></div><button class="add-place" type="button" aria-label="Add Lofoten Islands to my trip" title="Add to my trip">+</button></div>
+          <div class="card-description">Let the weather set the pace for once.</div>
+        </article>
+        <article class="destination-card" data-category="culture" data-name="marrakech morocco" data-place="Marrakech" data-country="Morocco" data-duration="4 days" data-type="culture" data-image="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1100&q=85" data-description="Garden courtyards, spice-scented lanes and rooftops at dusk.">
+          <button type="button" class="destination-image-button" aria-label="View Marrakech trip details"><img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1100&q=85" alt="Warm terracotta architecture in Morocco" loading="lazy" /><span class="card-number">Nº 06</span><span class="card-hover-arrow">↗</span></button>
+          <div class="destination-card-info"><div><h3>Marrakech</h3><p>Morocco <span>·</span> 4 days</p></div><button class="add-place" type="button" aria-label="Add Marrakech to my trip" title="Add to my trip">+</button></div>
+          <div class="card-description">A city best discovered one small lane at a time.</div>
+        </article>
+      </div>
+      <div class="empty-state" id="empty-state" hidden><span>✳</span><h3>No places found.</h3><p>Try another search or choose a different feeling.</p><button type="button" id="reset-filters" class="text-link">Reset discovery ↗</button></div>
+      <div class="discover-foot"><span><span class="small-spark">✳</span> SIX GOOD PLACES TO START</span><a href="#routes" class="text-link">See our field notes <span>↗</span></a></div>
+    </section>
+
+    <section class="field-notes" id="routes">
+      <div class="field-notes-image"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1800&q=88" alt="Mountain ridges fading into dusk" loading="lazy" /><div class="field-note-top"><span>FIELD NOTES / 008</span><span>ITALIAN ALPS</span></div><div class="field-note-bottom"><span>WORDS BY NORTHSTAR STUDIO</span><span>6 MIN READ</span></div><div class="field-vertical">THE LONG WAY ROUND</div></div>
+      <div class="field-notes-copy"><div class="eyebrow"><span class="eyebrow-line"></span> NOTES FROM THE ROAD</div><h2>Take the<br />long <em>way.</em></h2><p class="field-lead">A good route leaves a little room for the unexpected.</p><p class="field-body">A turn you didn't plan. A lunch that lasts two hours. A view you keep coming back to, even when the map says you're supposed to be somewhere else.</p><a href="#discover" class="button button-outline">Find a slower route <span>↗</span></a><div class="note-pagination"><span class="note-active">01</span><span class="note-dash"></span><span>03</span><span class="note-pagination-label">A SMALL COLLECTION OF TRAVEL THOUGHTS</span></div></div>
+    </section>
+
+    <section class="how-section section-pad">
+      <div class="how-head"><div class="eyebrow"><span class="eyebrow-line"></span> NO 12-TAB SPREADSHEETS</div><h2>Good trips.<br /><em>Less admin.</em></h2></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01 / FIND A FEELING</span><div class="step-symbol symbol-sun">☼</div><h3>Start with a<br />little curiosity.</h3><p>Choose a place by the way you want to feel, not just the things you want to tick off.</p></article>
+        <article class="step-card"><span class="step-number">02 / MAKE IT YOURS</span><div class="step-symbol symbol-route">⌁</div><h3>Build a route<br />that breathes.</h3><p>Save places that catch your eye. Keep the essentials, leave the rest open.</p></article>
+        <article class="step-card"><span class="step-number">03 / GO LIVE IT</span><div class="step-symbol symbol-star">✳</div><h3>Leave room<br />for the good bits.</h3><p>Your plan is a starting point, not a schedule you have to obey.</p></article>
+      </div>
+    </section>
+
+    <div class="star-marquee" aria-hidden="true">
+      <div class="star-marquee-track">
+        <div class="star-marquee-group"><span>Go a little further</span><i>✳</i><span>Northstar travel studio</span><i>✳</i><span>Take the scenic route</span><i>✳</i><span>Notes from the road</span><i>✳</i></div>
+        <div class="star-marquee-group"><span>Go a little further</span><i>✳</i><span>Northstar travel studio</span><i>✳</i><span>Take the scenic route</span><i>✳</i><span>Notes from the road</span><i>✳</i></div>
+      </div>
+    </div>
+
+    <section class="closing-cta">
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=88" alt="Last light over a vast open landscape" loading="lazy" />
+      <div class="closing-overlay"></div><div class="closing-content"><span class="closing-kicker">YOUR NEXT GOOD STORY IS OUT THERE</span><h2>Go see<br /><em>for yourself.</em></h2><button type="button" id="closing-start" class="button button-light">Start making a trip <span>↗</span></button></div><div class="closing-foot"><span>NORTHSTAR TRAVEL STUDIO</span><span>TAKE THE SCENIC ROUTE. ALWAYS.</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#top"><span class="mark">✳</span> NORTHSTAR<span class="wordmark-period">.</span></a><span class="footer-note">Made for the curious, wherever you are.</span><div class="footer-links"><a href="#discover">Discover</a><a href="#routes">Field notes</a><a href="#top">Back to top ↑</a></div><span class="footer-copy">© 2026 NORTHSTAR STUDIO</span></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="trip-drawer" id="trip-drawer" aria-label="My trip" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL ROUTE</span><h2>My <em>trip.</em></h2></div><button class="icon-close" id="close-trip" aria-label="Close my trip" type="button">×</button></div>
+    <div class="drawer-body"><div class="drawer-summary"><div><strong id="drawer-place-count">0 places saved</strong><span id="drawer-duration">Your next story starts here.</span></div><span class="drawer-star">✳</span></div><div class="saved-places" id="saved-places"><div class="drawer-empty"><span>↘</span><h3>A little space<br />for your somewhere.</h3><p>Save the places that catch your eye. We'll keep them here while you plan.</p><button type="button" class="button button-dark" id="explore-from-drawer">Explore places <span>↗</span></button></div></div><div class="drawer-note"><span>GOOD TO KNOW</span><p>Your saved trip lives in this browser for this demo. No account or booking required.</p></div></div>
+    <div class="drawer-footer"><div class="drawer-footer-copy"><span>YOUR ROUTE, YOUR RULES</span><strong>Keep it flexible.</strong></div><button class="button button-dark" id="share-trip" type="button" disabled>Copy trip summary <span>↗</span></button><p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p></div>
+  </aside>
+
+  <dialog class="place-dialog" id="place-dialog" aria-labelledby="dialog-title"><button type="button" class="icon-close dialog-close" id="close-place-dialog" aria-label="Close place details">×</button><div class="dialog-image"><img id="dialog-image" src="" alt="" /><span class="dialog-image-label">NORTHSTAR FIELD NOTES</span></div><div class="dialog-copy"><span class="eyebrow"><span class="eyebrow-line"></span><span id="dialog-country">DESTINATION</span></span><h2 id="dialog-title">Somewhere <em>good.</em></h2><p id="dialog-description"></p><div class="dialog-meta"><span id="dialog-duration">6 DAYS</span><span>✳</span><span>BUILT FOR WANDERING</span></div><button class="button button-dark" id="dialog-add" type="button">Add to my trip <span>+</span></button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✳</span><span id="toast-message">Added to your trip</span><button type="button" id="toast-close" aria-label="Dismiss notification">×</button></div>
+</body>
+</html>
